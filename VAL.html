@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <title>VAL</title>
+    <style>
+        body {
+            background-color: rgb(254, 156, 218);
+            text-align: center;
+            font-family: "Times New Roman";
+            font-size: 20px;
+            margin: 0;
+        }
+        
+        h1 {
+            font-size:72px;
+            margin-top: 150px;
+        }
+
+        h2 {
+            font-size: 70px;
+            margin-top: 50px;
+        }
+         p {
+            font-size: 24px;
+            margin-bottom: 40px;
+         }
+
+        .button-container {
+            position: relative;
+            gap: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        
+        }
+
+        button {
+            background-color: rgb(194, 1, 78);
+            font-size: larger;
+            padding: 15px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            border: none;
+    
+        }
+    </style>
+</head>
+    <body>
+        <h1>Swara</h1>
+        <h2>Will you be my Valentine?</h2>
+        <p>Choose wisely!</p>
+        <div class="button-container">
+        <button onclick="window.location.href='Yes page.html'">YES</button>
+        <button id="noBtn" onmouseover= "move()" onclick="tryAgain()">no</button>
+          </div> 
+        <script>
+  function move() {
+    const btn = document.getElementById("noBtn");
+    btn.style.position = "fixed";
+    btn.style.transform = "none"; 
+    const bw = btn.offsetWidth;
+    const bh = btn.offsetHeight;
+    const pad = 10;
+    const maxX = Math.max(pad, window.innerWidth - bw - pad);
+    const maxY = Math.max(pad, window.innerHeight - bh - pad);
+    const x = Math.floor(Math.random() * (maxX - pad + 1)) + pad;
+    const y = Math.floor(Math.random() * (maxY - pad + 1)) + pad;
+
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+  }
+
+  function tryAgain() {
+    alert("Oops! something went wrong. try clicking YES.🤪");
+  }
+</script>
+
+        
+
+    </body>
+
+
+
+
+</html> 
+
